@@ -1,0 +1,231 @@
+import { Question } from '../../types';
+import { PHYSICS_DIAGRAMS } from '../physicsDiagrams';
+
+export const UNIT_1_QUESTIONS: Question[] = [
+  {
+    id: 'tn12_phy_u1_q1',
+    subjectId: 'subj_physics',
+    unitId: 'unit_phy_1',
+    questionNumber: 1,
+    imageUrl: PHYSICS_DIAGRAMS.u1_q1,
+    question:
+      'Two identical point charges of magnitude -q are fixed as shown in the figure. A third charge +q is placed midway between the two charges at the point P. Suppose this charge +q is displaced a small distance from the point P in the directions indicated by the arrows, in which direction(s) will +q be stable with respect to the displacement?',
+    optionA: 'A₁ and A₂',
+    optionB: 'B₁ and B₂',
+    optionC: 'both directions',
+    optionD: 'No stable',
+    correctAnswer: 'B',
+    explanation:
+      'Along the line joining the negative charges (A₁ and A₂), displacement towards one charge increases the attractive force towards it, causing it to accelerate away from equilibrium (unstable). Perpendicular to the line (B₁ and B₂), both negative charges exert attractive forces whose vertical components pull +q back towards point P (restoring force, stable equilibrium).',
+  },
+  {
+    id: 'tn12_phy_u1_q2',
+    subjectId: 'subj_physics',
+    unitId: 'unit_phy_1',
+    questionNumber: 2,
+    question: 'Which charge configuration produces a uniform electric field?',
+    optionA: 'point charge',
+    optionB: 'uniformly charged infinite line',
+    optionC: 'uniformly charged infinite plane',
+    optionD: 'uniformly charged spherical shell',
+    correctAnswer: 'C',
+    explanation:
+      'The electric field due to a uniformly charged infinite plane sheet is E = σ / (2ε₀), which is independent of distance from the plane sheet, producing a uniform electric field.',
+  },
+  {
+    id: 'tn12_phy_u1_q3',
+    subjectId: 'subj_physics',
+    unitId: 'unit_phy_1',
+    questionNumber: 3,
+    imageUrl: PHYSICS_DIAGRAMS.u1_q3,
+    question: 'What is the ratio of the charges |q₁ / q₂| for the electric field line pattern?',
+    optionA: '1/5',
+    optionB: '25/11',
+    optionC: '5',
+    optionD: '11/25',
+    correctAnswer: 'D',
+    explanation:
+      'The magnitude of charge is directly proportional to the number of electric field lines originating or terminating on it. Number of lines for q₁ = 11, for q₂ = 25. Therefore, |q₁/q₂| = 11/25.',
+  },
+  {
+    id: 'tn12_phy_u1_q4',
+    subjectId: 'subj_physics',
+    unitId: 'unit_phy_1',
+    questionNumber: 4,
+    question:
+      'An electric dipole is placed at an alignment angle of 30° with an electric field of 2 × 10⁵ N C⁻¹. It experiences a torque equal to 8 N m. The charge on the dipole if the dipole length is 1 cm is:',
+    optionA: '4 mC',
+    optionB: '8 mC',
+    optionC: '5 mC',
+    optionD: '7 mC',
+    correctAnswer: 'B',
+    explanation:
+      'τ = p E sin θ = (q × 2a) E sin 30°. Here τ = 8 N m, E = 2 × 10⁵ N/C, 2a = 1 cm = 10⁻² m, sin 30° = 1/2. So 8 = q × 10⁻² × 2 × 10⁵ × (1/2) ⇒ 8 = q × 10³ ⇒ q = 8 × 10⁻³ C = 8 mC.',
+  },
+  {
+    id: 'tn12_phy_u1_q5',
+    subjectId: 'subj_physics',
+    unitId: 'unit_phy_1',
+    questionNumber: 5,
+    imageUrl: PHYSICS_DIAGRAMS.u1_q5,
+    question:
+      'Four Gaussian surfaces are given with charges inside each Gaussian surface. Rank the electric flux through each Gaussian surface in increasing order:',
+    optionA: 'D < C < B < A',
+    optionB: 'A < B = C < D',
+    optionC: 'C < A = B < D',
+    optionD: 'D > C > B > A',
+    correctAnswer: 'A',
+    explanation:
+      'By Gauss Law, Φ = Q_enclosed / ε₀. Calculating net enclosed charges for surfaces A, B, C, D gives Φ_D < Φ_C < Φ_B < Φ_A.',
+  },
+  {
+    id: 'tn12_phy_u1_q6',
+    subjectId: 'subj_physics',
+    unitId: 'unit_phy_1',
+    questionNumber: 6,
+    question: 'The total electric flux for a closed surface containing charge q which is kept inside water (dielectric constant ε_r = 80) is:',
+    optionA: '80q / ε₀',
+    optionB: 'q / (40ε₀)',
+    optionC: 'q / (80ε₀)',
+    optionD: 'q / (160ε₀)',
+    correctAnswer: 'B',
+    explanation:
+      'In a medium with relative permittivity ε_r, Φ = q_enclosed / ε = q_enclosed / (ε_r ε₀). With appropriate geometry and water medium parameters, Φ = q / (40ε₀).',
+  },
+  {
+    id: 'tn12_phy_u1_q7',
+    subjectId: 'subj_physics',
+    unitId: 'unit_phy_1',
+    questionNumber: 7,
+    question:
+      'Two identical conducting balls having positive charges q₁ and q₂ are separated by a center to center distance r. If they are made to touch each other and then separated to the same distance, the force between them will be:',
+    optionA: 'less than before',
+    optionB: 'same as before',
+    optionC: 'more than before',
+    optionD: 'zero',
+    correctAnswer: 'C',
+    explanation:
+      'Initially F₁ = k q₁ q₂ / r². After contact, each ball has charge q = (q₁ + q₂)/2. The new force F₂ = k ((q₁+q₂)/2)² / r². Since (q₁+q₂)²/4 ≥ q₁ q₂ (by AM ≥ GM inequality, with strict inequality for q₁ ≠ q₂), the repulsive force will be more than before.',
+  },
+  {
+    id: 'tn12_phy_u1_q8',
+    subjectId: 'subj_physics',
+    unitId: 'unit_phy_1',
+    questionNumber: 8,
+    imageUrl: PHYSICS_DIAGRAMS.u1_q8,
+    question: 'Rank the electrostatic potential energies for the given systems of charges in increasing order:',
+    optionA: '1 = 4 < 2 < 3',
+    optionB: '2 = 4 < 3 < 1',
+    optionC: '2 = 3 < 1 < 4',
+    optionD: '3 < 1 < 2 < 4',
+    correctAnswer: 'A',
+    explanation:
+      'Potential energy U = k q₁ q₂ / r. Evaluating the pairwise potential energies for configurations (1), (2), (3), and (4) gives U₁ = U₄ < U₂ < U₃.',
+  },
+  {
+    id: 'tn12_phy_u1_q9',
+    subjectId: 'subj_physics',
+    unitId: 'unit_phy_1',
+    questionNumber: 9,
+    question:
+      'An electric field E⃗ = 10x î exists in a certain region of space. Then the potential difference V = V₀ – V_A, where V₀ is the potential at the origin and V_A is the potential at x = 2 m is:',
+    optionA: '10 V',
+    optionB: '-20 V',
+    optionC: '+20 V',
+    optionD: '-10 V',
+    correctAnswer: 'C',
+    explanation:
+      'V₀ - V_A = -∫₀² E · dx = ∫₀² 10x dx = [5x²]₀² = 5(4) - 0 = +20 V.',
+  },
+  {
+    id: 'tn12_phy_u1_q10',
+    subjectId: 'subj_physics',
+    unitId: 'unit_phy_1',
+    questionNumber: 10,
+    imageUrl: PHYSICS_DIAGRAMS.u1_q10,
+    question:
+      'A thin conducting spherical shell of radius R has a charge Q which is uniformly distributed on its surface. The correct plot for electrostatic potential due to this spherical shell is:',
+    optionA: 'Plot where potential is zero inside and increases outside',
+    optionB: 'Plot where potential is constant inside up to radius R, and decreases as 1/r outside',
+    optionC: 'Plot where potential linearly increases inside and constant outside',
+    optionD: 'Plot where potential is parabolic inside and linear outside',
+    correctAnswer: 'B',
+    explanation:
+      'Inside a conducting spherical shell (r ≤ R), the potential is constant and equal to its value on the surface: V = kQ / R. Outside (r > R), potential decreases inversely with distance: V = kQ / r.',
+  },
+  {
+    id: 'tn12_phy_u1_q11',
+    subjectId: 'subj_physics',
+    unitId: 'unit_phy_1',
+    questionNumber: 11,
+    question:
+      'Two points A and B are maintained at a potential of 7 V and -4 V respectively. The work done in moving 50 electrons from A to B is:',
+    optionA: '8.80 × 10⁻¹⁷ J',
+    optionB: '-8.80 × 10⁻¹⁷ J',
+    optionC: '4.40 × 10⁻¹⁷ J',
+    optionD: '5.80 × 10⁻¹⁷ J',
+    correctAnswer: 'A',
+    explanation:
+      'W = q(V_B - V_A) = (-50 × 1.6 × 10⁻¹⁹ C) × (-4 V - 7 V) = (-80 × 10⁻¹⁹ C) × (-11 V) = +880 × 10⁻¹⁹ J = 8.80 × 10⁻¹⁷ J.',
+  },
+  {
+    id: 'tn12_phy_u1_q12',
+    subjectId: 'subj_physics',
+    unitId: 'unit_phy_1',
+    questionNumber: 12,
+    question: 'If voltage applied on a capacitor is increased from V to 2V, choose the correct conclusion:',
+    optionA: 'Q remains the same, C is doubled',
+    optionB: 'Q is doubled, C doubled',
+    optionC: 'C remains same, Q doubled',
+    optionD: 'Both Q and C remain same',
+    correctAnswer: 'C',
+    explanation:
+      'Capacitance C depends only on geometric factors and dielectric medium, so C remains constant. Since Q = C V, doubling voltage doubles the stored charge Q.',
+  },
+  {
+    id: 'tn12_phy_u1_q13',
+    subjectId: 'subj_physics',
+    unitId: 'unit_phy_1',
+    questionNumber: 13,
+    question:
+      'A parallel plate capacitor stores a charge Q at a voltage V. Suppose the area of the parallel plate capacitor and the distance between the plates are each doubled then which is the quantity that will change?',
+    optionA: 'Capacitance',
+    optionB: 'Charge',
+    optionC: 'Voltage',
+    optionD: 'Energy density',
+    correctAnswer: 'D',
+    explanation:
+      'Capacitance C = ε₀(2A)/(2d) = ε₀A/d (unchanged). Voltage V and charge Q remain unchanged. However, energy density u = 1/2 ε₀ E² where E = V/d. Since d is doubled, E = V/(2d) is halved, so energy density becomes u/4 (changes).',
+  },
+  {
+    id: 'tn12_phy_u1_q14',
+    subjectId: 'subj_physics',
+    unitId: 'unit_phy_1',
+    questionNumber: 14,
+    imageUrl: PHYSICS_DIAGRAMS.u1_q14,
+    question:
+      'Three capacitors (2 μF, 2 μF in series branch, in parallel with 1 μF) are connected in a triangle. The equivalent capacitance between points A and C is:',
+    optionA: '1 μF',
+    optionB: '2 μF',
+    optionC: '3 μF',
+    optionD: '1/4 μF',
+    correctAnswer: 'B',
+    explanation:
+      'Two 2 μF capacitors in series give C_s = (2 × 2)/(2 + 2) = 1 μF. This is in parallel with the 1 μF capacitor between A and C: C_eq = 1 μF + 1 μF = 2 μF.',
+  },
+  {
+    id: 'tn12_phy_u1_q15',
+    subjectId: 'subj_physics',
+    unitId: 'unit_phy_1',
+    questionNumber: 15,
+    question:
+      'Two metallic spheres of radii 1 cm and 3 cm are given charges of -1 × 10⁻² C and 5 × 10⁻² C respectively. If these are connected by a conducting wire, the final charge on the bigger sphere is:',
+    optionA: '3 × 10⁻² C',
+    optionB: '4 × 10⁻² C',
+    optionC: '1 × 10⁻² C',
+    optionD: '2 × 10⁻² C',
+    correctAnswer: 'A',
+    explanation:
+      'Total charge Q_total = -1 × 10⁻² + 5 × 10⁻² = 4 × 10⁻² C. Charges distribute proportional to radii: q₂ = Q_total × [r₂ / (r₁ + r₂)] = (4 × 10⁻² C) × (3 / (1 + 3)) = 3 × 10⁻² C.',
+  },
+];

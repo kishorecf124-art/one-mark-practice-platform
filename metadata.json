@@ -1,0 +1,6 @@
+{
+  "name": "OneQuest",
+  "description": "Offline one-mark question practice desktop app for students with instant feedback, wrong questions review, and progress tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

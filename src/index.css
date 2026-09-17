@@ -1,0 +1,210 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Local Font Support for User-Uploaded Fonts */
+@font-face {
+  font-family: 'AppCustomFont';
+  src: url('/fonts/custom-font.woff2') format('woff2'),
+       url('/fonts/custom-font.woff') format('woff'),
+       url('/fonts/custom-font.ttf') format('truetype'),
+       url('/fonts/custom-font.otf') format('opentype'),
+       url('/fonts/font.woff2') format('woff2'),
+       url('/fonts/font.ttf') format('truetype'),
+       url('/fonts/font.otf') format('opentype'),
+       url('/custom-font.ttf') format('truetype'),
+       url('/font.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: 'AppCustomFont', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+@layer base {
+  html, body, button, input, select, textarea, h1, h2, h3, h4, h5, h6, p, span, div, label {
+    font-family: 'AppCustomFont', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 dark:bg-[#030614] dark:text-slate-100;
+  }
+
+  ::selection {
+    @apply bg-indigo-500 text-white;
+  }
+}
+
+/* ==========================================================================
+   Milky Way Galaxy & Deep-Space Dark Mode Theme
+   ========================================================================== */
+
+@keyframes starTwinkle {
+  0%, 100% {
+    opacity: 0.38;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-star-twinkle {
+  animation: starTwinkle infinite ease-in-out;
+}
+
+/* Translucent Deep Space Glass Surfaces in Dark Mode - allows Milky Way to shine through */
+.dark .bg-white,
+.dark .bg-slate-900,
+.dark .bg-slate-900\/80,
+.dark .bg-slate-900\/90,
+.dark .bg-slate-950 {
+  background-color: rgba(9, 14, 38, 0.52) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.dark .bg-white\/80,
+.dark .bg-slate-900\/60,
+.dark .bg-slate-900\/50 {
+  background-color: rgba(7, 11, 30, 0.45) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.dark .bg-slate-800,
+.dark .bg-slate-800\/80,
+.dark .bg-slate-800\/70,
+.dark .bg-slate-800\/60,
+.dark .bg-slate-800\/50 {
+  background-color: rgba(18, 25, 60, 0.48) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Cosmic Border Accents with Soft Indigo/Violet Tint */
+.dark .border-slate-800,
+.dark .border-slate-800\/80,
+.dark .border-slate-800\/60,
+.dark .border-slate-700,
+.dark .border-slate-700\/80 {
+  border-color: rgba(99, 102, 241, 0.18) !important;
+}
+
+/* Sidebar and Header Glass in Dark Mode */
+.dark aside#main_sidebar {
+  background-color: rgba(6, 10, 28, 0.82) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-right-color: rgba(99, 102, 241, 0.2) !important;
+}
+
+.dark header {
+  background-color: rgba(7, 11, 32, 0.75) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom-color: rgba(99, 102, 241, 0.2) !important;
+}
+
+/* Subtle Cosmic Violet/Indigo Glow on Active Interactive Elements */
+.dark button.bg-indigo-600,
+.dark button.bg-indigo-500,
+.dark .bg-indigo-600,
+.dark .bg-indigo-500 {
+  box-shadow: 0 0 16px -2px rgba(99, 102, 241, 0.45), 0 4px 12px rgba(79, 70, 229, 0.3) !important;
+}
+
+.dark .dark\:bg-indigo-950\/70,
+.dark .dark\:bg-indigo-950\/80,
+.dark .dark\:bg-indigo-950\/60,
+.dark .dark\:bg-indigo-950 {
+  background-color: rgba(49, 46, 129, 0.42) !important;
+  border-color: rgba(129, 140, 248, 0.32) !important;
+  box-shadow: 0 0 16px -3px rgba(99, 102, 241, 0.25) !important;
+}
+
+/* High Contrast and Legibility for Content */
+.dark .text-slate-100,
+.dark .text-white {
+  color: #f8fafc !important;
+}
+
+.dark .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+.dark .text-slate-500 {
+  color: #818cf8 !important;
+  opacity: 0.85;
+}
+
+/* Cosmic Scrollbars */
+.dark ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.dark ::-webkit-scrollbar-track {
+  background: rgba(3, 6, 20, 0.5);
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.25);
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(129, 140, 248, 0.45);
+}
+
+/* Ensure Main Viewport allows Galaxy to shine through */
+.dark main#main_view_container {
+  background-color: transparent !important;
+}
+
+/* Shooting Stars across the night sky */
+@keyframes shootingStarAnim {
+  0% {
+    transform: translateX(0) translateY(0) rotate(-35deg) scale(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-450px) translateY(320px) rotate(-35deg) scale(1);
+    opacity: 0;
+  }
+}
+
+.shooting-star {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(168, 85, 247, 0.8), rgba(99, 102, 241, 0.4), transparent);
+  border-radius: 9999px;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.9));
+  opacity: 0;
+  pointer-events: none;
+}
+
+.shooting-star-1 {
+  top: 15%;
+  right: 18%;
+  width: 120px;
+  animation: shootingStarAnim 7s infinite 2s ease-in;
+}
+
+.shooting-star-2 {
+  top: 38%;
+  right: 8%;
+  width: 150px;
+  animation: shootingStarAnim 11s infinite 6.5s ease-in;
+}
+
+.shooting-star-3 {
+  top: 5%;
+  right: 42%;
+  width: 100px;
+  animation: shootingStarAnim 9s infinite 9s ease-in;
+}
+
+
+
